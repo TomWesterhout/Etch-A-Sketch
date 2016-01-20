@@ -50,6 +50,10 @@ p, .link {
 	padding: 0;
 }
 
+a:hover {
+	font-weight: bold;
+}
+
 /* Container div for the input fields */
 .input-div {
 	position: relative;
@@ -59,4 +63,40 @@ p, .link {
 	float: right;
 	right: 7%;
 	margin-top: 6%;
+}
+
+.input {
+	width: 100px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	border-top: 1px solid #bcbcbc;
+	border-bottom: 1px solid #bcbcbc;
+	outline: none;
+	font-family: 'Amatic SC', cursive;
+	color: white;
+	font-size: 4em;
+}
+
+.button {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	overflow: hidden;
+	font-family: 'Amatic SC', cursive;
+	color: white;
+	font-size: 4em;
+}
+
+input:hover {
+	font-weight: bold;
+}
+
+.input:hover {
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	border-left: 1px solid #bcbcbc;
+	border-right: 1px solid #bcbcbc;
 }
