@@ -1,20 +1,43 @@
 body {
 	margin: 0;
 	padding: 0;
+	border: 0;
+	font-size: 100%;
 	width: 100%;
-	height: 100%;
 	max-width: 1920px;
 	max-height: 1080px;
-	position: relative;
 	background-image: url(http://rummage-a-rama.com/wp-content/uploads/revslider/home-slider-1/Blackboard_Slide_BKG.jpg);
 	background-size: cover;
+	font-family: 'Amatic SC', cursive;
 }
 
-.grid {
-	width: 540px;
-	height: 540px;
+/* container div for website content */
+.wrapper {
+}
+
+/* container div for link positioned on the left side of the website */
+.link-div {
 	position: relative;
-	margin: auto;
-	margin-top: 100px;
+	display: inline-block;
+  	top: 250px;
+  	left: 50px;
+}
+
+/* customization of the links */
+.link {
+	font-size: 60px;
+	color: white;
+	text-decoration: none;
+}
+
+/* container div which contains the standard 16x by 16x divs and setted divs */
+.grid {	
+	width: 640px;
+	height: 640px;
+	display: inline-block;
+	position: absolute;
+	top: 50px;
+ 	left: 50%;
+  	transform: translateX(-50%);
 	border: 1px white solid;
 }
