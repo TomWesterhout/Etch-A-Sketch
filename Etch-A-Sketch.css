@@ -1,3 +1,4 @@
+
 body {
 	margin: 0;
 	padding: 0;
@@ -11,33 +12,92 @@ body {
 	font-family: 'Amatic SC', cursive;
 }
 
-/* container div for website content */
+/* Container div for website content */
 .wrapper {
+	width: 100%;
+	height: 100%;
+	max-width: 1920px;
+	max-height: 1080px;
+	text-align: center;
+	margin-top: 50px;
 }
 
-/* container div for link positioned on the left side of the website */
+/* Container div which contains the standard 16x by 16x divs and setted divs */
+.grid {	
+	position: relative;
+	display: inline-block;
+	width: 640px;
+	height: 640px;
+	border: 1px white solid;
+}
+
+/* Container div for link positioned on the left side of the website */
 .link-div {
 	position: relative;
 	display: inline-block;
-  	top: 250px;
-  	left: 50px;
+	width: 285px;
+	height: 285px;
+	float: left;
+	left: 75px;
+	margin-top: 100px;
 }
 
-/* customization of the links */
-.link {
-	font-size: 60px;
+/* Customization of the links */
+p, .link {
+	font-size: 4em;
 	color: white;
 	text-decoration: none;
+	margin: 0;
+	padding: 0;
 }
 
-/* container div which contains the standard 16x by 16x divs and setted divs */
-.grid {	
-	width: 640px;
-	height: 640px;
+a:hover {
+	font-weight: bold;
+}
+
+/* Container div for the input fields */
+.input-div {
+	position: relative;
 	display: inline-block;
-	position: absolute;
-	top: 50px;
- 	left: 50%;
-  	transform: translateX(-50%);
-	border: 1px white solid;
+	width: 285px;
+	height: 285px;
+	float: right;
+	right: 75px;
+	margin-top: 100px;
+}
+
+.input {
+	width: 100px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	border-top: 1px solid #bcbcbc;
+	border-bottom: 1px solid #bcbcbc;
+	outline: none;
+	font-family: 'Amatic SC', cursive;
+	color: white;
+	font-size: 4em;
+}
+
+.button {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	overflow: hidden;
+	font-family: 'Amatic SC', cursive;
+	color: white;
+	font-size: 4em;
+}
+
+input:hover {
+	font-weight: bold;
+}
+
+.input:hover {
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	border-left: 1px solid #bcbcbc;
+	border-right: 1px solid #bcbcbc;
 }
