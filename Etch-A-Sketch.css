@@ -2,13 +2,13 @@ body {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	width: 100%;
 	max-width: 1920px;
 	max-height: 1080px;
 	background-image: url(http://rummage-a-rama.com/wp-content/uploads/revslider/home-slider-1/Blackboard_Slide_BKG.jpg);
 	background-size: cover;
 	font-family: 'Amatic SC', cursive;
+	font-size: 100%;
 }
 
 /* Container div for website content */
@@ -27,7 +27,8 @@ body {
 	display: inline-block;
 	width: 640px;
 	height: 640px;
-	border: 1px white solid;
+	/*border: 1px white solid;*/
+	font-size: 0;
 }
 
 /* Container div for link positioned on the left side of the website */
@@ -44,7 +45,7 @@ body {
 /* Customization of the links */
 p, .link {
 	font-size: 4em;
-	color: white;
+	color: #bcbcbc;
 	text-decoration: none;
 	margin: 0;
 	padding: 0;
@@ -52,6 +53,7 @@ p, .link {
 
 a:hover {
 	font-weight: bold;
+	color: #fff;
 }
 
 /* Container div for the input fields */
@@ -74,7 +76,7 @@ a:hover {
 	border-bottom: 1px solid #bcbcbc;
 	outline: none;
 	font-family: 'Amatic SC', cursive;
-	color: white;
+	color: #bcbcbc;
 	font-size: 4em;
 }
 
@@ -86,12 +88,13 @@ a:hover {
 	cursor: pointer;
 	overflow: hidden;
 	font-family: 'Amatic SC', cursive;
-	color: white;
+	color: #bcbcbc;
 	font-size: 4em;
 }
 
 input:hover {
 	font-weight: bold;
+	color: #fff;
 }
 
 .input:hover {
@@ -99,4 +102,13 @@ input:hover {
 	border-bottom: 1px solid transparent;
 	border-left: 1px solid #bcbcbc;
 	border-right: 1px solid #bcbcbc;
+}
+
+.tile {
+	background-color: transparent;
+	border: 1px solid #bcbcbc;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	font-size: 0;
 }
