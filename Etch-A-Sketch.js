@@ -4,7 +4,6 @@ $(document).ready(function() {
 
 // Function which creates the standard grid of 16x by 16x divs, at a height based on the grid size and total amount of divs.
 function standardGrid() {
-
 	resetGrid();
 
 	var tileStandard = 16;
@@ -15,7 +14,6 @@ function standardGrid() {
 	}
 
 	divSizeStandard();
-
 	hoverStandard();
 }
 
@@ -26,7 +24,6 @@ function resetGrid() {
 
 // Function which sets the width and height of the divs based on the standard settings 16x by 16x.
 function divSizeStandard() {
-
 	var gridWidth = 640;
 	var tileStandard = 16;
 	var tileSize = (gridWidth / tileStandard) -2;
@@ -43,15 +40,15 @@ function hoverStandard() {
 
 // Function which creates a grid with a total of divs based on the input value.
 function createGrid() {
-
 	var tileTotal = document.getElementById("input").value; // Input value given by user.
 	var numberCheck = isNaN(tileTotal);						// Checks whether the input is a number.
 
 	if (tileTotal <= 0) {
 		confirm("Input has to be higher than zero.");		// Message given if input is zero or lower.
-	}
-	else if (numberCheck === true) {
+	} else if (numberCheck === true) {
 		confirm("Input has to be a number.");				// Message given if input is not a number.
+	} else if (tileTotal > 1000) {
+		confirm("input has to be between 1 and 1000");
 	};
 
 	resetGrid();
@@ -61,17 +58,73 @@ function createGrid() {
 	}
 
 	divSize();
-
 	hoverStandard();
 }
 
 // Function which sets the width and height of the divs based on the input from the user.
 function divSize() {
-
 	var gridWidth = 640;
 	var tileCount = document.getElementById("input").value;
 	var tileSide = Math.sqrt(tileCount);
 	var tileSize = (gridWidth / tileSide) -2;
 
 	$(".tile").css({'width': tileSize, 'height': tileSize});
+}
+
+// Function which creates a colored grid with a total of divs based on the input value.
+function createGridColor() {
+	var tileTotal = document.getElementById("input").value;
+	var numberCheck = isNaN(tileTotal);
+
+	if (tileTotal <= 0) {
+		confirm("Input has to be higher than zero");
+	} else if (numberCheck === true) {
+		confirm("Input has to be a number");
+	} else if (tileTotal > 1000) {
+		confirm("input has to be between 1 and 1000");
+	};
+
+	resetGrid();
+
+	for (i = 0; i < tileTotal; i++) {
+		$(".grid").append("<div class='tile'></div>");
+	}
+
+	divSize();
+	hoverColor();
+}
+
+function hoverColor() {
+	$(".tile").hover(function() {
+		var hue = "'rgb(" + Math.floor((Math.random() * 255) + 1) + ", " + Math.floor((Math.random() * 255) + 1) + ", " + Math.floor((Math.random() * 255) + 1) + ")'";
+		$(this).animate({'background-color': hue});
+	});
+}
+
+function createGridBW() {
+	var tileTotal = document.getElementById("input").value;
+	var numberCheck = isNaN(tileTotal);
+
+	if (tileTotal <= 0) {
+		confirm("Input has to be higher than zero.");
+	} else if (numberCheck === true) {
+		confirm("Input has to be a number");
+	} else if (tileTotal > 1000) {
+		confirm("input has to be between 1 and 1000");
+	};
+
+	for (i = 0; i < tileTotal; i++) {
+		$(".grid").append("<div class='tile'></div>");
+	}
+
+	divSize();
+	hoverBW();
+}
+
+function hoverBW() {
+	$(".tile").hover(function() {
+		var rgb = 255;
+
+
+	});
 }
