@@ -24,7 +24,7 @@ function resetGrid() {
 
 // Function which sets the width and height of the divs based on the standard settings 16x by 16x.
 function divSizeStandard() {
-	var gridWidth = 640;
+	var gridWidth = $(".grid").width();
 	var tileStandard = 16;
 	var tileSize = (gridWidth / tileStandard) -2;
 
@@ -63,7 +63,7 @@ function createGrid() {
 
 // Function which sets the width and height of the divs based on the input from the user.
 function divSize() {
-	var gridWidth = 640;
+	var gridWidth = $(".grid").width();
 	var tileCount = document.getElementById("input").value;
 	var tileSide = Math.sqrt(tileCount);
 	var tileSize = (gridWidth / tileSide) -2;
