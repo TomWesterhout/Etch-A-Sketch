@@ -97,7 +97,7 @@ function createGridColor() {
 function hoverColor() {
 	$(".tile").hover(function() {
 		var hue = "'rgb(" + Math.floor((Math.random() * 255) + 1) + ", " + Math.floor((Math.random() * 255) + 1) + ", " + Math.floor((Math.random() * 255) + 1) + ")'";
-		$(this).animate({'background-color': hue});
+		$(this).animate({'background-color': hue}, 400);
 	});
 }
 
@@ -113,6 +113,8 @@ function createGridBW() {
 		confirm("input has to be between 1 and 1000");
 	};
 
+	resetGrid();
+
 	for (i = 0; i < tileTotal; i++) {
 		$(".grid").append("<div class='tile'></div>");
 	}
@@ -122,9 +124,8 @@ function createGridBW() {
 }
 
 function hoverBW() {
-	$(".tile").hover(function() {
-		var rgb = 255;
-
-
+	$(".tile").hover(function(){
+		$(this).animate({'background-color': '#bcbcbc'}, 400);
+		$(this).css({'opacity': $(this).css('opacity') * 0.90});
 	});
 }
