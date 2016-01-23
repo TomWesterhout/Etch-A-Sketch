@@ -8,7 +8,7 @@ body {
 	background-image: url(http://rummage-a-rama.com/wp-content/uploads/revslider/home-slider-1/Blackboard_Slide_BKG.jpg);
 	background-size: cover;
 	font-family: 'Amatic SC', cursive;
-	font-size: 100%;
+	font-size: 1vw;
 }
 
 /* Container div for website content */
@@ -17,57 +17,88 @@ body {
 	height: 100%;
 	max-width: 1920px;
 	max-height: 1080px;
+	border: none;
+}
+
+/* Three container divs which will adjust its width according to the width of the screen and/or browser window. */
+.wrapper-1 {
+	width: 33.3333%;
+	height: 100%;
+	max-width: 640px;
+	max-height: 1080px;
+	border: none;
+	position: absolute;
 	text-align: center;
-	margin-top: 4%;
 }
 
-/* Container div which contains the standard 16x by 16x divs and setted divs */
-.grid {	
-	position: relative;
-	display: inline-block;
-	width: 640px;
-	height: 640px;
-	/*border: 1px white solid;*/
+.wrapper-2 {
+	width: 33.3333%;
+	height: 100%;
+	max-width: 640px;
+	max-height: 1080px;
+	border: none;
+	position: absolute;
+	left: 33.3333%;
 	font-size: 0;
-	overflow: hidden;
+	text-align: center;
 }
 
-/* Container div for link positioned on the left side of the website */
+.wrapper-3 {
+	width: 33.3333%;
+	height: 100%;
+	max-width: 640px;
+	max-height: 1080px;
+	border: none;
+	position: absolute;
+	right: 0%;
+	text-align: center;
+}
+
+/* Container div for links, positioned on the left side of the webpage. */
 .link-div {
 	position: relative;
 	display: inline-block;
 	width: 285px;
-	height: 285px;
-	float: left;
-	left: 5%;
-	margin-top: 6%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* Container div which contains the standard 16x by 16x divs and setted divs. */
+.grid {	
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	font-size: 0;
+	overflow: hidden;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* Container div for the input fields, positioned on the right side of the webpage. */
+.input-div {
+	position: relative;
+	display: inline-block;
+	width: 285px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 /* Customization of the links */
 p, .link {
-	font-size: 4em;
+	font-size: 4vw;
 	color: #bcbcbc;
 	text-decoration: none;
 	margin: 0;
 	padding: 0;
 }
 
+/* Hover effect which adds interaction between the user and the links/buttons. */
 a:hover {
 	font-weight: bold;
 	color: #fff;
 }
 
-/* Container div for the input fields */
-.input-div {
-	position: relative;
-	display: inline-block;
-	width: 285px;
-	height: 285px;
-	float: right;
-	right: 5%;
-	margin-top: 6%;
-}
-
+/* Customization of the input fields. */
 .input {
 	width: 100px;
 	background-color: transparent;
@@ -78,9 +109,10 @@ a:hover {
 	outline: none;
 	font-family: 'Amatic SC', cursive;
 	color: #bcbcbc;
-	font-size: 4em;
+	font-size: 4vw;
 }
 
+/* Customization of the buttons. */
 .button {
 	background-color: transparent;
 	background-repeat: no-repeat;
@@ -90,9 +122,10 @@ a:hover {
 	overflow: hidden;
 	font-family: 'Amatic SC', cursive;
 	color: #bcbcbc;
-	font-size: 4em;
+	font-size: 4vw;
 }
 
+/* Hover effect which adds interaction between the user and the webpage. */
 input:hover {
 	font-weight: bold;
 	color: #fff;
@@ -105,6 +138,7 @@ input:hover {
 	border-right: 1px solid #bcbcbc;
 }
 
+/* Customization of the chosen squares. */
 .tile {
 	background-color: transparent;
 	border: 1px solid #bcbcbc;
