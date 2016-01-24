@@ -58,7 +58,7 @@ body {
 .link-div {
 	position: relative;
 	display: inline-block;
-	width: 285px;
+	width: 100%;
 	top: 50%;
 	transform: translateY(-50%);
 }
