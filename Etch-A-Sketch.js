@@ -95,7 +95,7 @@ function createGridColor() {
 }
 
 function hoverColor() {
-	$(".tile").hover(function() {
+	$(".tile").mouseover(function() {
 		var hue = "'rgb(" + Math.floor((Math.random() * 255) + 1) + ", " + Math.floor((Math.random() * 255) + 1) + ", " + Math.floor((Math.random() * 255) + 1) + ")'";
 		$(this).animate({'background-color': hue}, 400);
 	});
