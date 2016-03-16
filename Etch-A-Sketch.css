@@ -5,7 +5,7 @@ body {
 	width: 100%;
 	max-width: 1920px;
 	max-height: 1080px;
-	background-image: url('/Users/Westwood/Documents/The Odin Project/Etch-A-Sketch/Blackboard_Slide_BKG.jpg');
+	background-image: url(http://rummage-a-rama.com/wp-content/uploads/revslider/home-slider-1/Blackboard_Slide_BKG.jpg);
 	background-size: cover;
 	font-family: 'Amatic SC', cursive;
 	font-size: 1vw;
